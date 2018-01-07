@@ -12,6 +12,14 @@ class TestStringPytxer(unittest.TestCase):
         self.assertEqual(string_result_first_letter,
                          StringPytxer.capitalize(string_test_first_letter))
 
+    def test_capitalize_name(self):
+
+        string_test_capitalize_name = "lady richy june"
+        result_capitalize_name = "Lady Richy June"
+
+        self.assertEqual(result_capitalize_name,
+                         StringPytxer.capitalize_name(string_test_capitalize_name))
+
 
 if __name__ == '__main__':
     unittest.main()
