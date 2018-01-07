@@ -20,6 +20,14 @@ class TestStringPytxer(unittest.TestCase):
         self.assertEqual(result_capitalize_name,
                          StringPytxer.capitalize_name(string_test_capitalize_name))
 
+    def test_capitalize_name_with_upper_lower_mix():
+
+        string_test_capitalize_name = "laDy riChy JunE"
+        result_capitalize_name = "Lady Richy June"
+
+        self.assertEqual(result_capitalize_name,
+                         StringPytxer.capitalize_name(string_test_capitalize_name))
+
 
 if __name__ == '__main__':
     unittest.main()
