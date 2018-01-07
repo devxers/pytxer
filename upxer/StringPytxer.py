@@ -8,3 +8,7 @@ def capitalize(text):
         return text[:1].upper() + text[1:].lower()
     else:
         return text
+
+def list_to_string(list):
+    return " ".join(str(x) for x in list)
+
