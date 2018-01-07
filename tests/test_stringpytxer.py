@@ -12,6 +12,16 @@ class TestStringPytxer(unittest.TestCase):
         self.assertEqual(string_result_first_letter,
                          StringPytxer.capitalize(string_test_first_letter))
 
+    def test_list_to_string(self):
+
+        test_list_of_strings = ["Garcias",
+                                "Kevin",
+                                "Days"]
+        result_list_to_string = "Garcias Kevin Days"
+
+        self.assertEqual(result_list_to_string,
+                         StringPytxer.list_to_string(test_list_of_strings))
+
     def test_capitalize_name(self):
 
         string_test_capitalize_name = "lady richy june"
