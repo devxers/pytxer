@@ -25,7 +25,7 @@ def list_to_string(list):
 
 def capitalize_name(name):
     if is_uncapitalize_name(name):
-        list_of_substrings = name.lower().split()
+        list_of_substrings = name.split()
 
         list_of_substrings_capitalize = [
             capitalize(word) for word in list_of_substrings]
