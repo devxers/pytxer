@@ -3,9 +3,14 @@ import re
 regex_first_letter_lowercase = re.compile(r"(^[^A-Z])")
 regex_capitalize_name = re.compile(r"\b[^\s^A-Z]")
 
+def is_uncapitalize(text):
+    return bool(regex_first_letter_lowercase.search(text))
+
+def is_uncapitalize_name(name):
+    return bool(regex_capitalize_name.search(name))
 
 def capitalize(text):
-    if bool(regex_first_letter_lowercase.search(text)):
+    if is_uncapitalize(text):
         return text[:1].upper() + text[1:].lower()
     else:
         return text
@@ -15,7 +20,7 @@ def list_to_string(list):
 
 
 def capitalize_name(name):
-    if bool(regex_capitalize_name.search(name)):
+    if is_uncapitalize_name(name):
         list_of_substrings = name.split()
 
         list_of_substrings_capitalize = [capitalize(word) for word in list_of_substrings]
