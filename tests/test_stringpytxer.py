@@ -38,6 +38,22 @@ class TestStringPytxer(unittest.TestCase):
         self.assertEqual(result_capitalize_name,
                          StringPytxer.capitalize_name(string_test_capitalize_name))
 
+    def test_abbreviate_name(self):
+
+        string_test_abbreviate_name = "Kevin smith garcias"
+        result_abbreviate_name = "Kevin S. G."
+
+        self.assertEqual(result_abbreviate_name,
+                         StringPytxer.abbreviate_name(string_test_abbreviate_name))
+
+    def test_abbreviate_name_with_all_lowercase(self):
+
+        string_result_abbreviate_name = "lilian days sia"
+        result_abbreviate_name = "Lilian D. S."
+
+        self.assertEqual(result_abbreviate_name,
+                         StringPytxer.abbreviate_name(string_result_abbreviate_name))
+
 
 if __name__ == '__main__':
     unittest.main()
