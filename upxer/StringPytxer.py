@@ -1,6 +1,6 @@
 import re
 
-regex_first_letter_lowercase = re.compile(r"(^[^A-Z])")
+regex_first_letter_lowercase = re.compile(r"(^[^A-Z])|\w([A-Z])")
 regex_capitalize_name = re.compile(r"\b[^\s^A-Z]")
 
 
