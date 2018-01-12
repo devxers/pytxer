@@ -15,7 +15,7 @@ def is_uncapitalize_name(name):
 
 def capitalize(text):
     if is_uncapitalize(text):
-        return text[:1].upper() + text[1:].lower()
+        return text.capitalize()
     else:
         return text
 
