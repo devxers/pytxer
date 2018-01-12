@@ -21,7 +21,7 @@ def capitalize(text):
 
 
 def capitalize_list_of_strings(list_strings):
-    return [capitalize(word) for word in list_strings]
+    yield from (capitalize(word) for word in list_strings)
 
 
 def list_to_string(list):
@@ -47,7 +47,7 @@ def abbreviate_name(name, max_len=12):
 
         string_splitted = string_abbreviate_name.lower().split()
 
-        return list_to_string(capitalize_list_of_strings(string_splitted))
+        return list_to_string(list(capitalize_list_of_strings(string_splitted)))
 
     else:
         return name
