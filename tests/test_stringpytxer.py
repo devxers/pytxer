@@ -5,54 +5,35 @@ from upxer import StringPytxer
 
 class TestStringPytxer(unittest.TestCase):
     def test_capitalize_first_letter(self):
-
-        string_test_first_letter = "diego"
-        string_result_first_letter = "Diego"
-
-        self.assertEqual(string_result_first_letter,
-                         StringPytxer.capitalize(string_test_first_letter))
+        self.assertEqual("Diego", StringPytxer.capitalize("diego"))
 
     def test_list_to_string(self):
-
         test_list_of_strings = ["Garcias",
                                 "Kevin",
                                 "Days"]
-        result_list_to_string = "Garcias Kevin Days"
 
-        self.assertEqual(result_list_to_string,
+        self.assertEqual("Garcias Kevin Days",
                          StringPytxer.list_to_string(test_list_of_strings))
 
     def test_capitalize_name(self):
 
-        string_test_capitalize_name = "lady richy june"
-        result_capitalize_name = "Lady Richy June"
-
-        self.assertEqual(result_capitalize_name,
-                         StringPytxer.capitalize_name(string_test_capitalize_name))
+        self.assertEqual("Lady Richy June",
+                         StringPytxer.capitalize_name("lady richy june"))
 
     def test_capitalize_name_with_upper_lower_mix(self):
 
-        string_test_capitalize_name = "laDy riChy JunE"
-        result_capitalize_name = "Lady Richy June"
-
-        self.assertEqual(result_capitalize_name,
-                         StringPytxer.capitalize_name(string_test_capitalize_name))
+        self.assertEqual("Lady Richy June",
+                         StringPytxer.capitalize_name("laDy riChy JunE"))
 
     def test_abbreviate_name(self):
 
-        string_test_abbreviate_name = "Kevin smith garcias"
-        result_abbreviate_name = "Kevin S. G."
-
-        self.assertEqual(result_abbreviate_name,
-                         StringPytxer.abbreviate_name(string_test_abbreviate_name))
+        self.assertEqual("Kevin S. G.",
+                         StringPytxer.abbreviate_name("Kevin smith garcias"))
 
     def test_abbreviate_name_with_all_lowercase(self):
 
-        string_result_abbreviate_name = "lilian days sia"
-        result_abbreviate_name = "Lilian D. S."
-
-        self.assertEqual(result_abbreviate_name,
-                         StringPytxer.abbreviate_name(string_result_abbreviate_name))
+        self.assertEqual("Lilian D. S.",
+                         StringPytxer.abbreviate_name("lilian days sia"))
 
 
 if __name__ == '__main__':
