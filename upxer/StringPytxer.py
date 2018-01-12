@@ -21,8 +21,7 @@ def capitalize(text):
 
 
 def capitalize_list_of_strings(list_strings):
-    for word in list_strings:
-        yield capitalize(word)
+    yield from (capitalize(word) for word in list_strings)
 
 
 def list_to_string(list):
